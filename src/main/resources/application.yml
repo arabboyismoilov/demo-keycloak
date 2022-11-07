@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    username: postgres
+    password: arabboy123
+    url: jdbc:postgresql://localhost:5432/postgres
+  jpa:
+    hibernate:
+      ddl-auto: create
+
+server:
+  port: 8181
+
+keycloak:
+  realm: mentorship
+  auth-server-url: http://localhost:8082/auth
+  resource: spring-boot-client
+  bearer-only: true
+  credentials:
+    secret: sseRZ8LJLursCGPydAHLYskyelCzjHRk
+  ssl-required: none
+  use-resource-role-mappings: true
